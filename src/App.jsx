@@ -9,6 +9,7 @@ function App() {
   const [isError, setIsError] = useState(false)
 
   async function fetchTours() {
+    setIsLoading(true)
     try {
       const response = await fetch(url)
       if (!response.ok) {
